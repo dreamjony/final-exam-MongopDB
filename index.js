@@ -52,6 +52,7 @@ app.get('/get-student', (req, res) => {
     });
   });
 
+
 // Get Student By ID
 app.get('/get-student/:id', (req, res) => {
     studentModel.findById(req.params.id).then((student) => {
@@ -60,6 +61,7 @@ app.get('/get-student/:id', (req, res) => {
       res.status(400).send('Unable to find student data');
     });
   });
+
 
   // Update Student By ID
 app.put('/update-student/:id', (req, res) => {
@@ -70,6 +72,7 @@ app.put('/update-student/:id', (req, res) => {
       res.status(400).send('Unable to update student data');
     });
  });
+ 
 
  // Delete Student By ID
 app.delete('/delete-student/:id', (req, res) => {
